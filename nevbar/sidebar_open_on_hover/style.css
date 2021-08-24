@@ -1,0 +1,70 @@
+* {
+    padding: 0px;
+    box-sizing: border-box;
+    /* overflow-x: hidden; */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+#mySidenav a {
+    position: fixed;
+    right: -145px;
+    transition: 0.3s;
+    padding: 10px;
+    width: 180px;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    border-radius: 0 5px 5px 10px;
+    z-index: 10;
+}
+
+#mySidenav a span {
+    padding-left: 10px;
+}
+
+@media screen and (max-width: 600px) {
+    #mySidenav a {
+        right: -145px;
+    }
+}
+
+#mySidenav a:hover {
+    right: -40px;
+}
+
+#about {
+    top: 60px;
+    background: black;
+}
+
+#blog {
+    top: 130px;
+    background: linear-gradient(to top, #9933ff 0%, #ff3399 100%);
+}
+
+#projects {
+    top: 200px;
+    background: linear-gradient(to bottom, #0000cc 0%, #0000ff 100%);
+}
+
+#twitter {
+    top: 270px;
+    background: linear-gradient(to bottom, #3333ff 0%, #6699ff 100%);
+}
+
+#mail {
+    top: 340px;
+    background-color: #ff4d4d;
+}
+
+#dev {
+    top: 410px;
+    background-color: black;
+}

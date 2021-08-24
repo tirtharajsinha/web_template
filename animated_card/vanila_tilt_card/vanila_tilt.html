@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=7">
+    <title>vanila tilt effect</title>
+    <link rel="stylesheet" href="vanila_tilt.css">
+</head>
+
+<body>
+    <div class="my-work" id="project">
+        <img src="static/dev.png" class="image-dev" alt="" data-aos="zoom-in-down" width="200px;">
+        <h2>My Recent Works</h2>
+
+        <section class="proj">
+
+
+            <div class="box">
+                <h2 class="name">Project Name</h2>
+                <a href="#" target="_blank" class="buy">View Now</a>
+                <div class="circle"></div>
+                <img src="static/bostas.png" class="product" alt="">
+            </div>
+            <div class="box">
+                <h2 class="name">Project Name</h2>
+                <a href="#" target="_blank" class="buy">View
+          Now</a>
+                <div class="circle"></div>
+                <img src="static/code.png" class="product" alt="" width="150px">
+            </div>
+            <div class="box">
+                <h2 class="name">Project Name</h2>
+                <a href="#" target="_blank" class="buy">View Now</a>
+                <div class="circle"></div>
+                <img src="static/devsat.png" class="product" alt="">
+                <div id="contact">
+
+                </div>
+            </div>
+
+        </section>
+        <a href="#" style="color:black;">
+            <div class="viewmore">View More</div>
+        </a>
+    </div>
+</body>
+<script src="vanilla-tilt.min.js" type="text/javascript"></script>
+<script>
+    VanillaTilt.init(document.querySelectorAll(".box"), {
+        max: 25,
+        speed: 600
+    });
+</script>
+
+</html>

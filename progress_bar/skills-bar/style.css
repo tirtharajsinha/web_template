@@ -1,0 +1,32 @@
+.fullbar {
+    width: 90%;
+    background-color: gray;
+    border: 0px solid gray;
+    border-radius: 10px;
+    box-shadow: 0 8px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 8px 0 rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+}
+
+.probar {
+    background-color: cyan;
+    border: 2px solid cyan;
+    border-radius: 10px;
+    margin: 0px;
+    padding: 0px;
+    height: 10px;
+}
+
+.progress {
+    text-align: left;
+    color: #8c8a85;
+    cursor: pointer;
+    transition-property: font-size;
+    transition-duration: 2s;
+    width: 60%;
+}
+
+@media screen and (max-width: 700px) {
+    .progress {
+        width: 90%;
+    }
+}

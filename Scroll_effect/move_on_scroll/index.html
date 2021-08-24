@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>Scrolling effect</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <section>
+        <img src="Img_set2/bg.png" alt="bg" id="bg">
+        <img src="Img_set1/moon.png" alt="moon" id="moon">
+        <img src="Img_set2/mountain.png" alt="mountain" id="mountain">
+        <img src="Img_set2/road.png" alt="road" id="road">
+        <h2 id="text"><u>Tirtharaj sinha</u></h2>
+    </section>
+    <script type="text/javascript">
+        let bg = document.getElementById("bg");
+        let moon = document.getElementById("moon");
+        let mountain = document.getElementById("mountain");
+        let road = document.getElementById("road");
+        let text = document.getElementById("text");
+
+
+        window.addEventListener('scroll', function() {
+            var value = window.scrollY;
+            bg.style.top = value * 0.5 + "px";
+            moon.style.left = -value * 1 + "px";
+            mountain.style.top = -value * 0.15 + "px";
+            road.style.top = -value * 0.1 + "px";
+            text.style.top = value * 1 + "px";
+        })
+    </script>
+</body>
+
+</html>

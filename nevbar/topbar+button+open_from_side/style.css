@@ -1,0 +1,191 @@
+* {
+    padding: 0px;
+    box-sizing: border-box;
+    margin: 0px;
+    /* overflow-x: hidden; */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+#pagebody {
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+}
+
+
+/*top-nav panel classes*/
+
+.nevbar {
+    display: flex;
+    justify-content: space-between;
+}
+
+.nevbar i {
+    font-size: 30px;
+    color: black;
+    padding: 10px;
+    overflow-x: hidden;
+}
+
+.nevbar .items {
+    display: flex;
+}
+
+#mySidebar {
+    /* margin-top: 10px; */
+    height: 50px;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    transition: 0.5s;
+    padding-top: 10;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.87);
+    width: 100%;
+}
+
+.sidebar .closebtn {
+    display: none;
+}
+
+.sidebar a,
+h3 {
+    padding: 8px 16px 8px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #3f3e3e;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidebar h3 {
+    font-size: 30px;
+    color: rgb(4, 170, 109);
+    border-right: 2px solid black;
+    margin-bottom: 0px;
+    padding: 7px;
+}
+
+.sidebar a:not(.closebtn):hover {
+    padding-top: 16px;
+    border-bottom: 2px solid rgb(221, 17, 17);
+    color: #000000;
+    font-weight: 600px;
+    padding-bottom: 0px;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 15px;
+    font-size: 36px;
+    margin-left: 50px;
+    padding-top: 0px;
+}
+
+.closebtn:hover {
+    color: red;
+    padding-bottom: 0px;
+}
+
+.openbtn {
+    cursor: pointer;
+    color: black;
+    position: fixed;
+    background-color: white;
+    padding: 6px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    border: none;
+    border-radius: 50%;
+    transition: all 0.2s ease;
+    display: none;
+    font-size: 16px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-top: 10px;
+    margin-left: 10px;
+    z-index: 7;
+}
+
+.progress-container {
+    width: 100%;
+    height: 8px;
+    background: rgba(204, 204, 204, 0.884);
+    position: fixed;
+    z-index: 9;
+    margin-top: 50px;
+}
+
+.progress-bar {
+    height: 8px;
+    /* background: rgba(4, 170, 109, 0.871); */
+    background: linear-gradient(to right, #66ff66 70%, #00ffff 100%);
+    width: 0%;
+    transition: all 0.2s ease;
+}
+
+.openbtn :hover {
+    color: rgb(53, 53, 53);
+}
+
+.addblur {
+    -webkit-filter: blur(3px);
+    filter: blur(3px);
+}
+
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+
+@media screen and (max-width: 800px) {
+    #mySidebar {
+        height: 140%;
+        width: 0;
+        position: fixed;
+        z-index: 10;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 15px;
+        flex-direction: column;
+        background-color: black;
+    }
+    .sidebar .closebtn {
+        display: block;
+        padding-top: 10px;
+    }
+    .sidebar a {
+        margin-top: 10px;
+        padding: 8px 16px 8px 16px;
+        font-size: 25px;
+        color: rgb(94, 94, 94);
+    }
+    .sidebar h3 {
+        color: white;
+        border-right: none;
+        font-size: 25px;
+        border-bottom: 2px solid white;
+        width: 70%;
+        display: inline-block;
+        text-align: left;
+    }
+    .sidebar a:not(.closebtn):hover {
+        padding: 8px 16px 8px 32px;
+        color: rgb(255, 255, 255);
+    }
+    .openbtn {
+        display: block;
+    }
+    .progress-container {
+        margin-top: 0px;
+    }
+}

@@ -1,0 +1,167 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.main {
+  width: 100%;
+
+  text-align: center;
+  background-image: url(static/greenbg.jpg);
+  background-repeat: repeat;
+  overflow: hidden;
+}
+.magictext {
+  display: flex;
+  justify-content: center;
+  font-size: 8vw;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: "Steelfish Rg", "helvetica neue", helvetica, arial, sans-serif;
+  font-weight: 800;
+
+  overflow: hidden;
+}
+.magictext .left {
+  display: inline;
+  color: rgb(193, 221, 186);
+  width: 50%;
+  text-align: right;
+}
+.magictext .right {
+  display: inline;
+  position: relative;
+  color: black;
+  text-align: left;
+  mix-blend-mode: lighten;
+  background-color: rgb(193, 221, 186);
+  text-shadow: 5px 2px 4px #a8a2a2;
+  width: 50%;
+}
+.textbottom {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  height: 250px;
+  overflow: hidden;
+}
+.textbottom .left {
+  width: 50%;
+}
+.textbottom .right {
+  width: 50%;
+  /* mix-blend-mode: lighten; */
+  background-color: rgb(193, 221, 186);
+}
+.nev a {
+  text-decoration: none;
+  color: rgb(101, 155, 101);
+  font-weight: 900;
+  font-size: 20px;
+  transition: all 0.3s ease;
+  border-bottom-width: 4px;
+}
+.nev {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 20px;
+  color: greenyellow;
+}
+.nev .active {
+  color: green;
+}
+.nev a:hover {
+  border-bottom-style: double;
+  color: teal;
+}
+.social a {
+  text-transform: none;
+  color: rgb(101, 155, 101);
+  border-width: 0px;
+  border-left-width: 2px;
+  padding: 5px;
+  transition: all 0.3s ease;
+}
+.social p {
+  writing-mode: vertical-rl;
+  color: teal;
+  border-width: 0px;
+  border-left-width: 2px;
+  padding-bottom: 10px;
+  transition: all 0.3s ease;
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+.social {
+  height: 150px;
+  display: flex;
+  /* margin-top: 100px; */
+  flex-direction: column;
+  position: relative;
+  float: right;
+  padding-right: 20px;
+}
+.social a:hover {
+  border-left-style: solid;
+  color: teal;
+}
+.datetime {
+  float: left;
+  padding-left: 20px;
+  text-align: left;
+  transition: all 0.2s ease;
+}
+.datetime .time {
+  color: rgb(193, 221, 186);
+
+  font-size: 30px;
+}
+.time .hour {
+  margin-right: 10px;
+  font-size: 60px;
+  font-weight: 900;
+}
+.time .minute {
+  color: rgb(193, 221, 186);
+
+  font-size: 30px;
+}
+.time .mark {
+  font-size: 20px;
+  color: white;
+}
+.date .day {
+  position: relative;
+  top: -20px;
+  writing-mode: vertical-rl;
+  color: rgb(193, 221, 186);
+  font-size: 20px;
+  font-family: 400;
+  border-left: 4px solid rgb(193, 221, 186);
+}
+.date .daydate {
+  position: relative;
+  top: -20px;
+  font-family: "Steelfish Rg", "helvetica neue", helvetica, arial, sans-serif;
+  /* color: rgba(255, 255, 255, 0.411); */
+  font-size: 110px;
+  font-weight: 900;
+  background: linear-gradient(to top right, #ffffffc4 0%, #fcfcfc00 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.date .month {
+  position: relative;
+  z-index: 100;
+  top: -40px;
+  left: -110px;
+  color: rgb(255, 255, 255);
+  font-family: "Dancing Script", cursive;
+  font-size: 45px;
+  font-weight: 900;
+}

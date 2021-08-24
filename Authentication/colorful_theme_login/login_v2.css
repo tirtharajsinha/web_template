@@ -1,0 +1,126 @@
+* {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+body,
+html {
+    height: 100%;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.imagepanel {
+    width: 50%;
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.formpanel {
+    width: 50%;
+    min-width: 500px;
+    height: 100%;
+}
+
+.formpanel .eliments {
+    width: 70%;
+    margin: auto;
+    margin-top: 200px;
+}
+
+.eliments h1,
+h3 {
+    font-weight: 900;
+    font-family: "Righteous", cursive;
+    color: rgba(61, 216, 216, 0.795);
+}
+
+form {
+    padding-top: 100px;
+    width: 95%;
+    margin: auto;
+}
+
+.box {
+    width: 100%;
+    height: 100px;
+}
+
+.box label {
+    color: rgb(143, 143, 143);
+}
+
+.box input {
+    margin-top: 10px;
+    width: 70%;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    border: none;
+    border-bottom: 2px solid rgb(148, 143, 143);
+    background-color: transparent;
+}
+
+input:focus-visible,
+textarea:focus,
+select:focus {
+    /* border-width: 0px; */
+    outline: -webkit-focus-ring-color auto 0px;
+    border-color: black;
+}
+
+.box button {
+    width: 100px;
+    height: 40px;
+    font-size: 20px;
+    background-color: rgba(61, 216, 216, 0.795);
+    border: none;
+    border-radius: 20px;
+}
+
+@media only screen and (max-width: 600px) {
+    .container {
+        display: block;
+    }
+    .formpanel {
+        position: fixed;
+        margin: auto;
+        width: 100%;
+        margin: 0;
+        background-color: rgba(255, 255, 255, 0.774);
+        min-width: 200px;
+    }
+    .formpanel .eliments {
+        display: block;
+        width: 100%;
+        margin: auto;
+        margin: 0;
+        margin-top: 100px;
+        padding: 10%;
+    }
+    .imagepanel {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        -webkit-filter: blur(3px);
+        filter: blur(3px);
+    }
+    .box input {
+        width: 80%;
+        border-bottom: 2px solid rgb(78, 77, 77);
+    }
+    .eliments h1,
+    h3 {
+        color: rgba(218, 45, 82, 0.801);
+    }
+    .box button {
+        background-color: rgba(218, 45, 82, 0.801);
+    }
+}

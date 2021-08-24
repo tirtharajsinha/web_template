@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 : Page not found</title>
+    <style>
+        body {
+            background: #2b2929;
+            background-repeat: no-repeat;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin: 0;
+            padding: 0;
+            /* overflow-y: hidden; */
+            overflow-x: hidden;
+            text-align: center;
+        }
+        
+        .image1 {
+            height: 200px;
+            width: auto;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 40px;
+            filter: invert(100%);
+        }
+        
+        .headtext {
+            margin-top: 60px;
+            text-align: center;
+            color: blanchedalmond;
+            font-size: 50px;
+        }
+        
+        .errorh1 {
+            display: inline;
+            font-size: 250px;
+            font-weight: 900;
+            background: url("floral.jpg") center no-repeat;
+            text-align: center;
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .errorimg {
+            height: 200px;
+            width: auto;
+            animation: rotation 8s infinite linear;
+            position: relative;
+            left: -30px;
+        }
+        
+        a {
+            text-decoration: none;
+            background-color: turquoise;
+            font-size: 30px;
+            padding: 20px;
+            border-radius: 10px;
+            color: #3d3838;
+            font-weight: 900;
+            margin-top: 20px;
+            box-shadow: 0 2.8px 2.2px rgba(64, 224, 208, 0.096), 0 6.7px 5.3px rgba(64, 224, 208, 0.116);
+        }
+        
+        @keyframes rotation {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(359deg);
+            }
+        }
+        
+        @media only screen and (max-width: 700px) {
+            .errorh1 {
+                font-size: 40vw;
+            }
+            .errorimg {
+                height: 35vw;
+            }
+            .headtext {
+                font-size: 5vw;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <img class="image1" src="https://image.flaticon.com/icons/png/512/80/80471.png" alt="">
+    <h1 class="headtext">Opps, Page not found.</h1>
+    <h1 class="errorh1">4 <img class="errorimg" src="settings.png" alt="0">4 </h1>
+    <br><a href="#">Visit Home page</a>
+
+</body>
+
+</html>

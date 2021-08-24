@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <title>manual slider banner</title>
+    <link rel="stylesheet" href="slider-manual.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+    <script src="slider.js"></script>
+</head>
+
+<body>
+    <div class="slider-body" id="home">
+        <div class="slider">
+            <div class="slides">
+                <input type="radio" name="radio-btn" id="radio1" onchange="counter = 1;" checked>
+                <input type="radio" name="radio-btn" id="radio2" onchange="counter = 2;">
+                <input type="radio" name="radio-btn" id="radio3" onchange="counter = 3;">
+                <input type="radio" name="radio-btn" id="radio4" onchange="counter = 4;">
+                <!--slides divisions-->
+                <div class="slide first">
+                    <img src="https://images.pexels.com/photos/545008/pexels-photo-545008.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                    <div class="slide-text">
+                        <h2><b><u>Be positive</u></b></h2>
+                        It's a glad welcome we bring to you this morning, filled with the desires, hopes and dreams we all share.
+
+
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://images.pexels.com/photos/5827833/pexels-photo-5827833.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                    <div class="slide-text">
+                        <h2><b><u>Be in style</u></b></h2>
+                        We're delighted to offer the most hospitable welcome we can.
+
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://images.pexels.com/photos/749359/pexels-photo-749359.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                    <div class="slide-text">
+                        <h2><b><u>Love yourself</u></b></h2>
+                        look around you! An amiable welcome full of friendship is yours.
+
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="https://images.pexels.com/photos/125510/pexels-photo-125510.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+                    <div class="slide-text">
+                        <h2><b><u>Move forward</u></b></h2>
+                        Write it. Shoot it. Publish it. Crochet it, sauté it, whatever. MAKE.
+
+                    </div>
+                </div>
+
+                <!-- automatic navigation panel-->
+                <div class="navigation-auto">
+                    <div class="auto-btn1"></div>
+                    <div class="auto-btn2"></div>
+                    <div class="auto-btn3"></div>
+                    <div class="auto-btn4"></div>
+                </div>
+
+            </div>
+            <!--manual navigation-->
+            <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
