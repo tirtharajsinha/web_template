@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,700;1,300&display=swap");
+* {
+    margin: 0;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #222;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container a {
+    position: relative;
+    display: inline-block;
+    padding: 15px 30px;
+    border: 2px solid #0f0;
+    margin: 40px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-decoration: none;
+    letter-spacing: 2px;
+    color: #fff;
+    -webkit-box-reflect: below 0px linear-gradient(tranparent, #0002);
+    transition: 0.3s;
+}
+
+.container a:hover {
+    transition-delay: 0.88s;
+    color: #222;
+    box-shadow: 0 0 10px #0f0, 0 0 20px #0f0, 0 0 60px #0f0, 0 0 100px #0f0;
+}
+
+.container a span {
+    position: relative;
+    z-index: 10;
+}
+
+.container a:nth-child(2) {
+    filter: hue-rotate(80deg);
+}
+
+.container a::before {
+    content: "";
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px;
+    background: #0f0;
+    box-shadow: 5px -8px 0 #0f0, 5px 8px 0 #0f0;
+    transition: width 0.3s, left 0.3s, height 0.3s, box-shadow 0.3s;
+    transition-delay: 0.5s, 0.3s, 0s, 0s;
+}
+
+.container a:hover::before {
+    width: 60%;
+    height: 100%;
+    left: -2px;
+    box-shadow: 5px 0px 0 #0f0, 5px 0px 0 #0f0;
+    transition-delay: 0s, 0.3s, 0.7s, 0.7s;
+}
+
+.container a::after {
+    content: "";
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 2px;
+    background: #0f0;
+    box-shadow: -5px -8px 0 #0f0, -5px 8px 0 #0f0;
+    transition: width 0.3s, right 0.3s, height 0.3s, box-shadow 0.3s;
+    transition-delay: 0.5s, 0.3s, 0s, 0s;
+}
+
+.container a:hover::after {
+    width: 60%;
+    height: 100%;
+    right: -2px;
+    box-shadow: -5px 0px 0 #0f0, -5px 0px 0 #0f0;
+    transition-delay: 0s, 0.3s, 0.7s, 0.7s;
+}
