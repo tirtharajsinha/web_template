@@ -67,11 +67,13 @@ h3 {
 }
 
 .sidebar h3 {
-    font-size: 30px;
+    font-size: 25px;
     color: rgb(4, 170, 109);
     border-right: 2px solid black;
     margin-bottom: 0px;
     padding: 7px;
+    width: 175px;
+    white-space: nowrap;
 }
 
 .sidebar a:not(.closebtn):hover {
@@ -177,6 +179,7 @@ h3 {
         width: 70%;
         display: inline-block;
         text-align: left;
+        width: 175px;
     }
     .sidebar a:not(.closebtn):hover {
         padding: 8px 16px 8px 32px;
