@@ -15,6 +15,7 @@
             <div class="form">
                 <h2>Login</h2>
                 <form class="" action="login.html" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
                     <div class="inputBx">
                         <input type="text" name="username" placeholder="Username" required>
                         <img src="user.png" alt="">

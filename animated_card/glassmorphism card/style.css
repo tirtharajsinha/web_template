@@ -15,17 +15,18 @@ body {
     background-attachment: fixed;
 }
 
-.container {
+.card-container {
     position: relative;
-    width: 1000px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     margin: 20px;
     padding: 20px 0;
+    float: right;
 }
 
-.container .card {
+.card-container .card {
     position: relative;
     height: 250px;
     background: #fff;
@@ -36,7 +37,7 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
-.container .card .imgBx {
+.card-container .card .imgBx {
     position: absolute;
     top: 10px;
     left: 10px;
@@ -55,24 +56,24 @@ body {
     transition: 0.4s ease-in-out;
 }
 
-.container .card:hover .imgBx {
+.card-container .card:hover .imgBx {
     height: 150px;
     width: 150px;
     left: -75px;
     top: calc(50% - 75px);
 }
 
-.container .card .imgBx img {
+.card-container .card .imgBx img {
     max-width: 100px;
     filter: invert(1);
     transition: 0.5s ease-in-out;
 }
 
-.container .card:hover .imgBx img {
+.card-container .card:hover .imgBx img {
     max-width: 75px;
 }
 
-.container .card .content {
+.card-container .card .content {
     position: absolute;
     right: 0;
     width: calc(100% - 80px);
@@ -83,19 +84,19 @@ body {
     align-items: center;
 }
 
-.container .card .content h3 {
+.card-container .card .content h3 {
     color: red;
     margin-bottom: 5px;
     font-size: 24px;
 }
 
-.container .card .content p {
+.card-container .card .content p {
     color: rgb(133, 133, 133);
     margin-bottom: 5px;
     font-size: 14px;
 }
 
-.container .card .content a {
+.card-container .card .content a {
     display: inline-block;
     margin-top: 10px;
     padding: 8px 20px;
@@ -107,13 +108,13 @@ body {
 }
 
 @media (max-width: 1000px) {
-    .container {
+    .card-container {
         position: relative;
         width: 100%;
         flex-direction: column;
         align-items: center;
     }
-    .container .card {
+    .card-container .card {
         width: 300px;
         height: auto;
         flex-direction: column;
@@ -121,26 +122,26 @@ body {
         margin: -20px;
         box-shadow: none;
     }
-    .container .card .imgBx {
+    .card-container .card .imgBx {
         position: relative;
     }
-    .container .card .imgBx,
-    .container .card:hover .imgBx {
+    .card-container .card .imgBx,
+    .card-container .card:hover .imgBx {
         width: 80%;
         height: 150px;
         top: 100px;
         left: 10%;
     }
-    .container .card:hover .imgBx {
+    .card-container .card:hover .imgBx {
         animation-name: bounce;
         animation-duration: 1s;
         animation-iteration-count: infinite;
     }
-    .container .card .imgBx img,
-    .container .card:hover .imgBx img {
+    .card-container .card .imgBx img,
+    .card-container .card:hover .imgBx img {
         max-width: 100px;
     }
-    .container .card .content {
+    .card-container .card .content {
         position: relative;
         width: 100%;
         background: #fff;

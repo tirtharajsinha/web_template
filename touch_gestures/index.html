@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #slider {
+            width: 100%;
+            height: 500px;
+            margin-top: 100px;
+            background-color: lightsalmon;
+        }
+        
+        h1 {
+            text-align: center;
+        }
+    </style>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1 id="commandX"></h1>
+    <h1 id="commandY"></h1>
+    <div id="slider"></div>
+
+    <script>
+        let touchstartX = 0
+        let touchendX = 0
+        let touchstartY = 0
+        let touchendY = 0
+
+        const slider = document.getElementById('slider')
+
+        function handleGesture() {
+            document.getElementById("commandX").innerHTML = ""
+            document.getElementById("commandY").innerHTML = ""
+            if (touchendX < touchstartX) {
+                // left
+                if ((touchstartX - touchendX) > 100) {
+                    document.getElementById("commandX").innerHTML = "left swiped"
+                }
+                // document.getElementById("commandX").innerHTML = "left swiped"
+                // console.log(touchstartX - touchendX)
+            }
+            if (touchendX > touchstartX) {
+                //right
+                if ((touchendX - touchstartX) > 100) {
+                    document.getElementById("commandX").innerHTML = "right swiped"
+                }
+                // document.getElementById("commandX").innerHTML = "right swiped"
+                // console.log(touchendX - touchstartX)
+            }
+            if (touchendY < touchstartY) {
+                // up
+                if ((touchstartY - touchendY) > 100) {
+                    document.getElementById("commandY").innerHTML = "up swiped"
+                }
+                // document.getElementById("commandY").innerHTML = "up swiped"
+                // console.log(touchstartY - touchendY)
+            }
+            if (touchendY > touchstartY) {
+                //down
+                if ((touchendY - touchstartY) > 100) {
+                    document.getElementById("commandY").innerHTML = "down swiped"
+                }
+                // document.getElementById("commandY").innerHTML = "down swiped"
+                // console.log(touchendY > touchstartY)
+            }
+        }
+
+        slider.addEventListener('touchstart', e => {
+            touchstartX = e.changedTouches[0].screenX
+        })
+
+        slider.addEventListener('touchend', e => {
+            touchendX = e.changedTouches[0].screenX
+            handleGesture()
+        })
+
+        slider.addEventListener('touchstart', e => {
+            touchstartY = e.changedTouches[0].screenY
+        })
+        slider.addEventListener('touchend', e => {
+            touchendY = e.changedTouches[0].screenY
+            handleGesture()
+        })
+    </script>
+</body>
+
+</html>
