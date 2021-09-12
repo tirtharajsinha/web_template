@@ -1,0 +1,144 @@
+html,
+body {
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+body>.loader {
+    background: #111;
+    transform: scale(1.2, 1.2);
+    height: 100%;
+    width: 100%;
+}
+
+body>.loader>div {
+    border-radius: 50%;
+    border: 2px solid #fff;
+    transform-style: preserve-3d;
+    transform: rotateX(80deg) rotateY(20deg);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -100px;
+    margin-top: -100px;
+}
+
+body>.loader>div:first-of-type:after {
+    content: "";
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background: #fff;
+    border-radius: 50%;
+    transform: rotateX(-80deg) rotateY(0);
+    box-shadow: 0 0 25px #fff;
+    animation: nucleus_ 2s infinite linear;
+    left: 50%;
+    top: 50%;
+    margin-top: -20px;
+    margin-left: -20px;
+}
+
+body>.loader>div:nth-of-type(2) {
+    transform: rotateX(-80deg) rotateY(20deg);
+}
+
+body>.loader>div:nth-of-type(2)>div,
+body>.loader>div:nth-of-type(2)>div:after {
+    animation-delay: -0.5s;
+}
+
+body>.loader>div:nth-of-type(3) {
+    transform: rotateX(-70deg) rotateY(60deg);
+}
+
+body>.loader>div:nth-of-type(3)>div,
+body>.loader>div:nth-of-type(3)>div:after {
+    animation-delay: -1s;
+}
+
+body>.loader>div:nth-of-type(4) {
+    transform: rotateX(70deg) rotateY(60deg);
+}
+
+body>.loader>div:nth-of-type(4)>div,
+body>.loader>div:nth-of-type(4)>div:after {
+    animation-delay: -1.5s;
+}
+
+body>.loader>div>div {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation: trail_ 2s infinite linear;
+}
+
+body>.loader>div>div:after {
+    content: "";
+    position: absolute;
+    top: -5px;
+    box-shadow: 0 0 12px rgb(255, 255, 255);
+    left: 50%;
+    margin-left: -5px;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background-color: rgb(17, 235, 206);
+    animation: particle_ 2s infinite linear;
+}
+
+body>.loader>div:nth-child(1)>div:after {
+    background-color: rgb(235, 17, 53);
+}
+
+body>.loader>div:nth-child(2)>div:after {
+    background-color: rgb(111, 113, 228);
+}
+
+body>.loader>div:nth-child(3)>div:after {
+    background-color: rgb(213, 235, 17);
+}
+
+@keyframes trail_ {
+    from {
+        transform: rotateZ(0deg);
+    }
+    to {
+        transform: rotateZ(360deg);
+    }
+}
+
+@keyframes particle_ {
+    from {
+        transform: rotateX(90deg) rotateY(0deg);
+    }
+    to {
+        transform: rotateX(90deg) rotateY(-360deg);
+    }
+}
+
+@keyframes nucleus_ {
+    0%,
+    100% {
+        box-shadow: 0 0 0 transparent;
+    }
+    50% {
+        box-shadow: 0 0 25px #fff;
+    }
+}
+
+h2 {
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -50px;
+    margin-top: 120px;
+    /* text-align: center; */
+    font-weight: 500;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px rgb(255, 255, 255);
+}
