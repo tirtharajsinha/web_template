@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 850vh;
+    top: -500px;
+    background-color: #111;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+section .row {
+    position: relative;
+    width: 100%;
+    display: flex;
+    padding: 0px 0px;
+    margin: 0;
+    white-space: nowrap;
+    font-size: 50px;
+    transform: rotate(-30deg);
+    cursor: default;
+}
+
+i {
+    color: rgba(0, 0, 0, 0.3);
+    transition: 1.5s;
+    padding: 0px 5px;
+    user-select: none;
+    cursor: default;
+}
+
+i:hover {
+    color: #0f0;
+    transition: 0s;
+    cursor: default;
+    text-shadow: 0 0 50px #0f0;
+}
+
+section .row:nth-child(odd) div {
+    animation: animate1 80s linear infinite;
+    animation-delay: -80s;
+}
+
+section .row:nth-child(odd) div i:hover {
+    color: #0f0;
+    text-shadow: 0 0 50px #0f0;
+}
+
+section .row:nth-child(odd) div:nth-child(2) i:hover {
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 50px rgb(255, 255, 255);
+}
+
+section .row:nth-child(even) div {
+    animation: animate1 60s linear infinite;
+    animation-delay: -60s;
+    animation-direction: reverse;
+}
+
+section .row:nth-child(even) div i:hover {
+    color: rgb(255, 255, 0);
+    text-shadow: 0 0 50px rgb(255, 255, 0);
+}
+
+section .row:nth-child(even) div:nth-child(2) i:hover {
+    color: rgb(0, 247, 255);
+    text-shadow: 0 0 50px rgb(0, 247, 255);
+}
+
+@keyframes animate1 {
+    0% {
+        transform: translateX(100%);
+    }
+    0% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        transform: translateX(100%);
+    }
+    0% {
+        transform: translateX(-100%);
+    }
+}
