@@ -17,7 +17,7 @@ body {
 
 .card-container {
     position: relative;
-    width: 100%;
+    width: 1000px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;

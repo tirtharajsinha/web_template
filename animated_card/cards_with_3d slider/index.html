@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel='stylesheet' href='https://www.w3schools.com/w3css/4/w3.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+
+
+    <link rel="stylesheet" href="style.css">
+    <title>3d Card</title>
+</head>
+
+<body>
+    <section>
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="testimonialBox">
+                        <img src="https://mymodernmet.com/wp/wp-content/uploads/2017/12/bauhaus-art-5.jpg" alt="" class="quote">
+                        <div class="content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur eum sequi veniam, ad placeat ex enim illo consequuntur et voluptas.</p>
+                            <div class="details">
+                                <div class="imgBx">
+                                    <img src="user.png" alt="">
+                                </div>
+                                <h3>Someone Famous 1<br><span>Crative designer</span></h3>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonialBox">
+                        <img src="https://mymodernmet.com/wp/wp-content/uploads/2017/12/bauhaus-art-5.jpg" alt="" class="quote">
+                        <div class="content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur eum sequi veniam, ad placeat ex enim illo consequuntur et voluptas.
+                            </p>
+                            <div class="details">
+                                <div class="imgBx">
+                                    <img src="user.png" alt="">
+                                </div>
+                                <h3>Someone Famous 2<br><span>Crative designer</span></h3>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="testimonialBox">
+                        <img src="https://mymodernmet.com/wp/wp-content/uploads/2017/12/bauhaus-art-5.jpg" alt="" class="quote">
+                        <div class="content">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur eum sequi veniam, ad placeat ex enim illo consequuntur et voluptas.
+                            </p>
+                            <div class="details">
+                                <div class="imgBx">
+                                    <img src="user.png" alt="">
+                                </div>
+                                <h3>Someone Famous 3<br><span>Crative designer</span></h3>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
+
+
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <script>
+        console.log("hi");
+        var swiper = new Swiper(".mySwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 200,
+                modifier: 2,
+                slideShadows: true,
+            },
+            loop: true,
+            pagination: {
+                el: ".swiper-pagination",
+            },
+
+        });
+    </script>
+</body>
+
+</html>
