@@ -1,0 +1,85 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic);
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+body {
+  background: #2e3440;
+  color: #d8dee9;
+  font-family: "Poppins", sans-serif;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+nav {
+  width: 100%;
+  background: #2e344080;
+  backdrop-filter: blur(15px);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+nav h1 {
+  font-weight: 700;
+}
+nav .right {
+  width: auto;
+  background-color: transparent;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  color: #e5e9f0;
+}
+
+nav .right a {
+  text-decoration: none;
+  padding: 7px 15px;
+
+  margin-left: 10px;
+  border-radius: 10px;
+  font-weight: 600;
+}
+nav .right a:not(.active):hover {
+  color: #eceff4;
+  background-color: #4c566a4d;
+}
+
+.active {
+  position: relative;
+  color: #88c0d0;
+  background-color: transparent;
+}
+.active::before {
+  position: absolute;
+  background-color: #88c0d0;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  bottom: 3px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  content: "";
+}
+
+.active:hover {
+  color: #88c0d0;
+  background-color: #88c0d034;
+}
+
+/* body design */
+
+section {
+  width: 80%;
+  height: 500px;
+  background-color: #3b4252;
+  border-radius: 7px;
+  margin: auto;
+  margin-top: 50px;
+  padding: 10px;
+}
