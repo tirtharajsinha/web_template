@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <link rel="shortcut icon" href="favicon.png" type="image/png">
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <link rel='stylesheet' href='https://www.w3schools.com/w3css/4/w3.css'>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts-more.js"></script>
+    <script src="https://code.highcharts.com/modules/solid-gauge.js"></script>
+    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/modules/export-data.js"></script>
+    <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.17/dist/js/splide.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.17/dist/css/splide.min.css">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Admin Dashboard</title>
+</head>
+
+<body>
+    <div class="main">
+        <div class="sidebar">
+            <div class="branding">
+                <img id="expandbar" src="https://tirtharajsinha.github.io/favicon.png" alt="">
+                <p class="pagename fulld">Tirtharaj Sinha</p>
+                <p class="pagetype fulld">admin dashboard</p>
+            </div>
+            <div class="hr"></div>
+            <ul>
+                <h3>SITES</h3>
+                <a href="" class="active"><i class="fad fa-th-large"></i><span>Dashboard</span></a>
+                <a href=""><i class="fal fa-browser"></i><span>Application</span></a>
+            </ul>
+            <div class="hrs"></div>
+            <ul>
+                <h3>DATABASE</h3>
+                <a href=""><i class="fal fa-user-alt"></i><span>Users</span></a>
+                <a href=""><i class="fal fa-calendar-alt"></i><span>Event History</span></a>
+                <a href=""><i class="fal fa-tasks"></i><span>Project</span></a>
+                <a href=""><i class="fal fa-trophy"></i><span>Achivements</span></a>
+                <a href=""><i class="fal fa-typewriter"></i><span>Publication</span></a>
+                <a href=""><i class="fal fa-toolbox"></i><span>Skills</span></a>
+            </ul>
+            <div class="hrs"></div>
+            <ul>
+                <h3>APPS</h3>
+                <a href=""><i class="fal fa-eye"></i><span>Vsion</span></a>
+                <a href=""><i class="fal fa-code"></i><span>Scrapcode</span></a>
+                <a href=""><i class="fal fa-layer-group"></i><span>Blogo</span></a>
+                <a href=""><i class="fal fa-tasks"></i><span>Project</span></a>
+                <a href=""><i class="fal fa-trophy"></i><span>Achivements</span></a>
+                <a href=""><i class="fal fa-typewriter"></i><span>Publication</span></a>
+                <a href=""><i class="fal fa-toolbox"></i><span>Skills</span></a>
+            </ul>
+
+        </div>
+        <div class="container">
+            <div class="topbar">
+                <div class="topbarbox">
+                    <a href="#" class="pageh">Dashboard</a>
+                    <div class="sep fulld"></div>
+                    <a href="#" class="paget">admin</a>
+                </div>
+                <div class="topbarbox">
+                    <div class="searchbar">
+                        <i class="fal fa-search"></i>
+                        <input type="text" placeholder="Type to search...." autocomplete="off">
+                        <i class="fal fa-microphone"></i>
+                    </div>
+                    <div class="space fulld"></div>
+                    <div class="sep fulld"></div>
+                    <i class="fal fa-bell"></i>
+                    <div class="space"></div>
+                    <i class="fal fa-moon"></i>
+                    <div class="sep"></div>
+                    <i class="fal fa-user" id="control-center-btn"></i>
+                    <div class="space"></div>
+                </div>
+            </div>
+            <div class="control-center supercard">
+                <img src="Avatar.png" alt="">
+                <h4>Tirtharaj Sinha</h4>
+                <h5>@admin</h5>
+                <div class="btn">
+                    <a href="">Sign out</a>
+                    <a href="/">Visit app</a>
+                </div>
+            </div>
+            <div class="context">
+                <div class="centerbox">
+                    <div class="banner">
+
+                        <section class="splide" aria-label="Splide Basic HTML Example">
+                            <div class="splide__track">
+                                <ul class="splide__list">
+                                    <li class="splide__slide"><img src="dashboard.png" alt=""></li>
+                                    <li class="splide__slide"><img src="dashboard1.png" alt=""></li>
+                                    <li class="splide__slide"><img src="dashboard2.png" alt=""></li>
+                                </ul>
+                                <div class="splide__progress">
+                                    <div class="splide__progress__bar">
+                                    </div>
+                                </div>
+
+                                <div class="splide_controls">
+                                    <button class="splide__toggle" type="button">
+                                        <span class="splide__toggle__play"><i class="fad fa-play"></i></span>
+                                        <span class="splide__toggle__pause"><i class="fad fa-pause"></i></span>
+                                    </button>
+                                </div>
+
+                            </div>
+
+
+                        </section>
+                    </div>
+                    <div class="overview">
+                        <h3>Overview</h3>
+                        <div class="overviewcards">
+                            <div class="ocard">
+                                <div class="oicon"><i class="far fa-tasks"></i></div>
+                                <div class="otext">
+                                    <span>Projects</span>
+                                    <span>10</span>
+                                </div>
+                            </div>
+                            <div class="ocard">
+                                <div class="oicon"><i class="far fa-toolbox"></i></div>
+                                <div class="otext">
+                                    <span>Skills</span>
+                                    <span>15</span>
+                                </div>
+                            </div>
+                            <div class="ocard">
+                                <div class="oicon"><i class="far fa-trophy"></i></div>
+                                <div class="otext">
+                                    <span>Achivements</span>
+                                    <span>3</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="charts">
+                        <div class="gaugechart" id="gaugechart"></div>
+                        <div class="linechart">
+                            <canvas id="linechart"></canvas>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="rightbar">
+                    <div class="usercard supercard">
+                        <img src="Avatar.png" alt="">
+                        <h4>Tirtharaj Sinha</h4>
+                        <h5>@admin</h5>
+                        <div class="btn">
+                            <a href="">Sign out</a>
+                            <a href="/">Visit app</a>
+                        </div>
+                    </div>
+                    <div class="actionbox">
+                        <h3>Event history</h3>
+                        <ul class="events">
+                            <div class="event">
+                                <div class="ev-icon ev-update"><i class="fal fa-pen-alt"></i></div>
+                                <div class="ev-text">
+                                    <h4>Table(Id 1)</h4>
+                                    <p>Updated on <span>Sept 1, 2022</span></p>
+                                </div>
+                            </div>
+                            <div class="event">
+                                <div class="ev-icon ev-create"><i class="fal fa-layer-plus"></i></div>
+                                <div class="ev-text">
+                                    <h4>Table(Id 5)</h4>
+                                    <p>Created on <span>Sept 1, 2022</span></p>
+                                </div>
+                            </div>
+                            <div class="event">
+                                <div class="ev-icon ev-delete"><i class="fal fa-trash"></i></div>
+                                <div class="ev-text">
+                                    <h4>Table(Id 5)</h4>
+                                    <p>Removed on <span>Sept 1, 2022</span></p>
+                                </div>
+                            </div>
+                            <div class="event">
+                                <div class="ev-icon ev-create"><i class="fal fa-layer-plus"></i></div>
+                                <div class="ev-text">
+                                    <h4>Table(Id 5)</h4>
+                                    <p>Created on <span>Sept 1, 2022</span></p>
+                                </div>
+                            </div>
+                            <div class="event">
+                                <div class="ev-icon ev-delete"><i class="fal fa-trash"></i></div>
+                                <div class="ev-text">
+                                    <h4>Table(Id 5)</h4>
+                                    <p>Removed on <span>Sept 1, 2022</span></p>
+                                </div>
+                            </div>
+                            <div class="event">
+                                <div class="ev-icon ev-update"><i class="fal fa-pen-alt"></i></div>
+                                <div class="ev-text">
+                                    <h4>Table(Id 5)</h4>
+                                    <p>Updated on <span>Sept 1, 2022</span></p>
+                                </div>
+                            </div>
+                            <div class="event">
+                                <div class="ev-icon ev-create"><i class="fal fa-layer-plus"></i></div>
+                                <div class="ev-text">
+                                    <h4>Table(Id 5)</h4>
+                                    <p>Created on <span>Sept 1, 2022</span></p>
+                                </div>
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="fontawasome5.15-pro.js"></script>
+    <script src="chart.js"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>
