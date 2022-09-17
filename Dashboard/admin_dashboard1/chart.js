@@ -93,7 +93,7 @@ function renderIcons() {
   );
 }
 
-Highcharts.chart("gaugechart", {
+let gaugechart=new Highcharts.chart("gaugechart", {
   chart: {
     type: "solidgauge",
     height: "100%",
@@ -107,7 +107,7 @@ Highcharts.chart("gaugechart", {
     text: "Activity",
     style: {
       fontSize: "20px",
-      color: "#fff",
+      color: "#d8dee9",
     },
   },
 
@@ -120,7 +120,7 @@ Highcharts.chart("gaugechart", {
     },
     valueSuffix: "%",
     pointFormat:
-      '<span style="color:#d8dee9">{series.name}</span><br><span style="font-size:1.5em; color: {point.color}; font-weight: bold">{point.y}</span>',
+      '<span class="gauge-title">{series.name}</span><br><span style="font-size:1.5em; color: {point.color}; font-weight: bold">{point.y}</span>',
     positioner: function (labelWidth) {
       return {
         x: (this.chart.chartWidth - labelWidth) / 2,
@@ -249,7 +249,12 @@ const data = {
   ],
 };
 
-const config = {
+
+let current_theme="dark"
+let chart_color="#d8dee9";
+
+let config = {
+  responsive: true,
   type: "line",
   data: data,
   options: {
@@ -258,14 +263,23 @@ const config = {
         grid: {
           display: false,
         },
+        ticks: {
+          color: chart_color,
+        },
       },
       y: {
         grid: {
           display: false,
         },
+        ticks: {
+          color: chart_color,
+        },
       },
+      
     },
   },
 };
 
-const myChart = new Chart(document.getElementById("linechart"), config);
+let myChart = new Chart(document.getElementById("linechart"), config);
+myChart.update();
+

@@ -20,6 +20,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.17/dist/js/splide.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.17/dist/css/splide.min.css">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="loader.css">
 
     <title>Admin Dashboard</title>
 </head>
@@ -78,7 +79,7 @@
                     <div class="sep fulld"></div>
                     <i class="fal fa-bell"></i>
                     <div class="space"></div>
-                    <i class="fal fa-moon"></i>
+                    <i class="fal fa-moon" id="theme-toggle"></i>
                     <div class="sep"></div>
                     <i class="fal fa-user" id="control-center-btn"></i>
                     <div class="space"></div>
@@ -91,6 +92,26 @@
                 <div class="btn">
                     <a href="">Sign out</a>
                     <a href="/">Visit app</a>
+                </div>
+                <div class="settings">
+                    <div class="st-box" id="st-btn1">
+                        <div class="st-btn">
+                            <i class="fal fa-arrow-alt-up"></i>
+                        </div>
+                        <div class="st-label">Site Up</div>
+                    </div>
+                    <div class="st-box" id="st-btn2">
+                        <div class="st-btn">
+                            <i class="fal fa-sign-in"></i>
+                        </div>
+                        <div class="st-label">Login</div>
+                    </div>
+                    <div class="st-box" id="st-btn3">
+                        <div class="st-btn">
+                            <i class="fas fa-folder-plus"></i>
+                        </div>
+                        <div class="st-label">Sign up</div>
+                    </div>
                 </div>
             </div>
             <div class="context">
@@ -151,6 +172,7 @@
                     <div class="charts">
                         <div class="gaugechart" id="gaugechart"></div>
                         <div class="linechart">
+                            <h3>Event monitor</h3>
                             <canvas id="linechart"></canvas>
                         </div>
                     </div>
@@ -165,6 +187,27 @@
                         <div class="btn">
                             <a href="">Sign out</a>
                             <a href="/">Visit app</a>
+                        </div>
+
+                        <div class="settings">
+                            <div class="st-box">
+                                <div class="st-btn">
+                                    <i class="fal fa-arrow-alt-up"></i>
+                                </div>
+                                <div class="st-label">Site Up</div>
+                            </div>
+                            <div class="st-box">
+                                <div class="st-btn">
+                                    <i class="fal fa-sign-in"></i>
+                                </div>
+                                <div class="st-label">Login</div>
+                            </div>
+                            <div class="st-box">
+                                <div class="st-btn">
+                                    <i class="fas fa-folder-plus"></i>
+                                </div>
+                                <div class="st-label">Sign up</div>
+                            </div>
                         </div>
                     </div>
                     <div class="actionbox">
@@ -226,13 +269,48 @@
         </div>
     </div>
 
+    <div class="theme-loader">
+        <div class="exp-box"></div>
+        <div class="ani-box">
+            <div class="half-circle"></div>
+        </div>
+    </div>
+
+    <div class="page-loader" id="loader">
+        <div class="loader">
+            <div>
+                <div></div>
+            </div>
+            <div>
+                <div></div>
+            </div>
+            <div>
+                <div></div>
+            </div>
+            <div>
+                <div></div>
+            </div>
+        </div>
+    </div>
 
 
 
 
+    <script>
+        $(window).on('load', function () {
+            setTimeout(removeLoader, 0); //wait for page load PLUS two seconds.
+        });
+        function removeLoader() {
+            $("#loader").fadeOut(500, function () {
+                // fadeOut complete. Remove the loading div
+                $("#loader").remove(); //makes page more lightweight 
+            });
+        }
+    </script>
     <script src="fontawasome5.15-pro.js"></script>
     <script src="chart.js"></script>
     <script src="index.js"></script>
+
 </body>
 
 </html>
